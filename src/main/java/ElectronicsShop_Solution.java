@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class ElectronicsShopSolution {
+public class ElectronicsShop_Solution {
 
     /*
      * Complete the getMoneySpent function below.

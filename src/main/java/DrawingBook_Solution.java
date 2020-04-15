@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class DrawingBookSolution {
+public class DrawingBook_Solution {
 
     /*
      * Complete the pageCount function below.

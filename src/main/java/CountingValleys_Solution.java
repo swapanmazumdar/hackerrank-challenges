@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class CountingValleysSolution {
+public class CountingValleys_Solution {
 
     private static final Scanner scanner = new Scanner(System.in);
 

@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class SockMerchantSolution {
+public class SockMerchant_Solution {
 
     // Complete the sockMerchant function below.
     static int sockMerchant(int n, int[] arr) {

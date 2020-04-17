@@ -5,7 +5,26 @@ public class MakingAnagrams_Solution {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    // Complete the makeAnagram function below.
+    /**
+     * Time complexity: O(n)
+     * The rate of increase in time is dependent on the size of n (length of both the strings).
+     */
+    public static int makeAnagram(String a, String b) {
+        int count = 0;
+        int[] frequency = new int[57];
+
+        for (char c : a.toCharArray()) {
+            ++frequency[c - 'a'];
+        }
+        for (char c : b.toCharArray()) {
+            --frequency[c - 'a'];
+        }
+        for (int i = 0; i < frequency.length; i++) {
+            count += Math.abs(frequency[i]);
+        }
+        return count;
+    }
+
     public static int bruteForce_MakeAnagram(String str1, String str2) {
         int count = 0;
         StringBuilder stringBuilder = new StringBuilder();
@@ -15,8 +34,7 @@ public class MakingAnagrams_Solution {
             if (index != -1) {
                 str2 = str2.replaceFirst(String.valueOf(c), "");
                 stringBuilder.append(c);
-            }
-            if (index == -1) {
+            } else {
                 ++count;
             }
         }
@@ -28,7 +46,7 @@ public class MakingAnagrams_Solution {
 
         String a = scanner.nextLine();
         String b = scanner.nextLine();
-        int res = bruteForce_MakeAnagram(a, b);
+        int res = makeAnagram(a, b);
         System.out.println(res);
         //bufferedWriter.write(String.valueOf(res));
         //bufferedWriter.newLine();

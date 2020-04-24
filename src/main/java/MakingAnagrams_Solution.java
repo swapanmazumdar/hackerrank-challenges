@@ -1,6 +1,23 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Making Anagrams
+ * <p>
+ * We consider two strings to be anagrams of each other if the first string's letters can be rearranged to form the
+ * second string. In other words, both strings must contain the same exact letters in the same exact frequency.
+ * For example, bacdc and dcbac are anagrams, but bacdc and dcbad are not.
+ * <p>
+ * Alice is taking a cryptography class and finding anagrams to be very useful. She decides on an encryption scheme
+ * involving two large strings where encryption is dependent on the minimum number of character deletions required to
+ * make the two strings anagrams. Can you help her find this number?
+ * <p>
+ * Given two strings, s1 and s2, that may not be of the same length, determine the minimum number of character deletions
+ * required to make s1 and s2 anagrams. Any characters can be deleted from either of the strings.
+ * <p>
+ * For example, s1 = abc and s2 = amnop. The only characters that match are the a's so we have to remove bc from s1 and
+ * mnop from s2 for a total of 6 deletions.
+ */
 public class MakingAnagrams_Solution {
 
     private static final Scanner scanner = new Scanner(System.in);
@@ -42,16 +59,6 @@ public class MakingAnagrams_Solution {
     }
 
     public static void main(String[] args) throws IOException {
-        //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-        String a = scanner.nextLine();
-        String b = scanner.nextLine();
-        int res = makeAnagram(a, b);
-        System.out.println(res);
-        //bufferedWriter.write(String.valueOf(res));
-        //bufferedWriter.newLine();
-        //bufferedWriter.close();
-
-        //scanner.close();
+        System.out.println(makeAnagram("cde", "abc"));
     }
 }

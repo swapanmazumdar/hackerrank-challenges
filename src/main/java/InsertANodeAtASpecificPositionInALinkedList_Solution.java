@@ -59,7 +59,6 @@ public class InsertANodeAtASpecificPositionInALinkedList_Solution {
             }
         }
     }
-    // Complete the insertNodeAtPosition function below.
 
     /*
      * For your reference:

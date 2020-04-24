@@ -6,7 +6,18 @@ import java.util.Scanner;
  * The Fibonacci sequence begins with fibonacci(0) and fibonacci(1) as its first and second terms. After these first
  * two elements, each subsequent element is equal to the sum of the previous two elements.
  * <p>
- * Complete the recursive function fibonacci in the editor below. It must return the  element in the Fibonacci sequence.
+ * Programmatically:
+ * fibonacci(0) = 0
+ * fibonacci(1) = 1
+ * fibonacci(n) = fibonacci(n - 1) + fibonacci(n - 2)
+ * <p>
+ * Given n, return the nth number in the sequence.
+ * <p>
+ * As an example, n = 5. The Fibonacci sequence to 6 is fs = [0, 1, 1, 2, 3, 5, 8]. With zero-based indexing, fs[5] = 5.
+ *
+ * <p>
+ * Complete the recursive function fibonacci in the editor below. It must return the nth element in the Fibonacci
+ * sequence.
  * <p>
  * fibonacci has the following parameter(s):
  * n: the integer index of the sequence to return

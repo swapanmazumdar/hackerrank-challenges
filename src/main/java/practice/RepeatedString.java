@@ -1,12 +1,19 @@
 package practice;
 
-import java.io.IOException;
-import java.util.Scanner;
 import java.util.stream.IntStream;
 
+/**
+ * Repeated String
+ * <p>
+ * Lilah has a string, s, of lowercase English letters that she repeated infinitely many times.
+ * <p>
+ * Given an integer, n, find and print the number of letter a's in the first n letters of Lilah's infinite string.
+ * <p>
+ * For example, if the string s = 'abcac' and n = 10, the substring we consider is abcacabcac, the first 10 characters
+ * of her infinite string. There are 4 occurrences of a in the substring.
+ */
 public class RepeatedString {
 
-    // Complete the repeatedString function below.
     static long repeatedString(String s, long n) {
         int sLen = s.length();
 
@@ -14,33 +21,17 @@ public class RepeatedString {
         long count = characterStream.filter(c -> c == 'a').count();
         int remainder = (int) (n % sLen);
         int remainingCount = 0;
-        for(int i=0; i<remainder; i++) {
-            if(s.charAt(i) == 'a') {
+        for (int i = 0; i < remainder; i++) {
+            if (s.charAt(i) == 'a') {
                 remainingCount++;
             }
         }
         return n / sLen * count + remainingCount;
     }
 
-    private static final Scanner scanner = new Scanner(System.in);
-
-    public static void main(String[] args) throws IOException {
-        //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-        //String s = scanner.nextLine();
-        String s = "aba";
-        long n = 10;
-        //long n = scanner.nextLong();
-        //scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        long result = repeatedString(s, n);
-        System.out.println(result);
-        //bufferedWriter.write(String.valueOf(result));
-        //bufferedWriter.newLine();
-
-        //bufferedWriter.close();
-
-        //scanner.close();
+    public static void main(String[] args) {
+        System.out.println(repeatedString("abcac", 10));
+        System.out.println(repeatedString("aba", 10));
     }
 }
 

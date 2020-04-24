@@ -1,6 +1,14 @@
+/**
+ * Sorting: Bubble Sort
+ * Given an array of integers, sort the array in ascending order using the Bubble Sort algorithm above. Once sorted,
+ * print the following three lines:
+ * <p>
+ * Array is sorted in numSwaps swaps., where numSwaps is the number of swaps that took place.
+ * First Element: firstElement, where firstElement is the first element in the sorted array.
+ * Last Element: lastElement, where lastElement is the last element in the sorted array.
+ */
 public class Sorting_BubbleSort_Solution {
 
-    // Complete the countSwaps function below.
     static void countSwaps(int[] arr) {
         int swaps = 0;
         int unsortedLen = arr.length - 1;
@@ -16,7 +24,6 @@ public class Sorting_BubbleSort_Solution {
             }
             unsortedLen--;
         }
-        //IntStream.of(arr).forEach(System.out::println);
         System.out.printf("Array is sorted in %d swaps.%n", swaps);
         System.out.printf("First Element: %d%n", arr[0]);
         System.out.printf("Last Element: %d%n", arr[arr.length - 1]);
@@ -30,15 +37,7 @@ public class Sorting_BubbleSort_Solution {
     }
 
     public static void main(String[] args) {
-        int n = 3;
-        int[] a = new int[n];
-
-        String[] aItems = "3 2 1".split(" ");
-        for (int i = 0; i < n; i++) {
-            int aItem = Integer.parseInt(aItems[i]);
-            a[i] = aItem;
-        }
-
-        countSwaps(a);
+        countSwaps(new int[]{3, 2, 1});
+        countSwaps(new int[]{1, 2, 3});
     }
 }

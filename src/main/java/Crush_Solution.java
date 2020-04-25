@@ -7,20 +7,25 @@
 public class Crush_Solution {
 
     static long arrayManipulation(int n, int[][] queries) {
-        int result = 0;
         int[] arr = new int[n];
         for (int i = 0; i < queries.length; i++) {
             int j = 0;
-            int indexI = queries[i][j++] - 1;
-            int indexJ = queries[i][j++] - 1;
-            int value = queries[i][j];
-
-            for (int k = indexI; k <= indexJ; k++) {
-                arr[k] += value;
-                result = arr[k] > result ? arr[k] : result;
+            int lower = queries[i][j++];
+            int upper = queries[i][j++];
+            int sum = queries[i][j];
+            arr[lower - 1] += sum;
+            if (upper < n) {
+                arr[upper] -= sum;
             }
         }
-        return result;
+
+        long max = 0;
+        long temp = 0;
+        for (int i = 0; i < n; i++) {
+            temp += arr[i];
+            if (temp > max) max = temp;
+        }
+        return max;
     }
 
     public static void main(String[] args) {

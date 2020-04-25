@@ -4,7 +4,7 @@
  * the array element between two given indices, inclusive. Once all operations have been performed, return the maximum
  * value in your array.
  */
-public class Crush_Solution {
+public class ArrayManipulation_Solution {
 
     static long arrayManipulation(int n, int[][] queries) {
         int[] arr = new int[n];

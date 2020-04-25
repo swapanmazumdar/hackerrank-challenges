@@ -61,8 +61,9 @@ public class InsertANodeAtTheTailOfALinkedList_Solution {
         BufferedWriter bufferedWriter = new BufferedWriter(new PrintWriter(System.out));
         SinglyLinkedList llist = new SinglyLinkedList();
 
-        for (int i = 0; i < 10; i++) {
-            SinglyLinkedListNode llist_head = insertNodeAtTail(llist.head, i);
+        int[] input = new int[]{141, 302, 164, 530, 474};
+        for (int i = 0; i < input.length; i++) {
+            SinglyLinkedListNode llist_head = insertNodeAtTail(llist.head, input[i]);
             llist.head = llist_head;
         }
         printSinglyLinkedList(llist.head, "\n", bufferedWriter);

@@ -38,6 +38,22 @@ public class CompareTwoLinkedLists_Solution {
         }
     }
 
+    static boolean compareListsRecursive(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        if (head1 == null && head2 == null) {
+            return true;
+        }
+        if (head1 == null && head2 != null) {
+            return false;
+        }
+        if (head1 != null && head2 == null) {
+            return false;
+        }
+        if (head1.data != head2.data) {
+            return false;
+        }
+        return compareListsRecursive(head1.next, head2.next);
+    }
+
     static boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
         if (head1 == null && head2 == null) return true;
         while (head1 != null || head2 != null) {
@@ -66,6 +82,20 @@ public class CompareTwoLinkedLists_Solution {
         }
 
         System.out.println(compareLists(llist1.head, llist2.head) ? 1 : 0);
+        System.out.println(compareListsRecursive(llist1.head, llist2.head) ? 1 : 0);
+
+        llist1 = new SinglyLinkedList();
+        for (int i = 0; i < 10; i++) {
+            llist1.insertNode(i);
+        }
+
+        llist2 = new SinglyLinkedList();
+        for (int i = 9; i < 15; i++) {
+            llist2.insertNode(i);
+        }
+
+        System.out.println(compareLists(llist1.head, llist2.head) ? 1 : 0);
+        System.out.println(compareListsRecursive(llist1.head, llist2.head) ? 1 : 0);
     }
 
 }

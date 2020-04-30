@@ -1,1 +1,1 @@
-# hackerrank-challenges
+# Contains practice materials of hackerrank challenges

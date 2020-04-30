@@ -1,1 +1,1 @@
-# Contains practice materials of hackerrank challenges
+# Contains solutions of hackerrank challenges using Java 8

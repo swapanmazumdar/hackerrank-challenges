@@ -28,21 +28,21 @@ public class BreakingBestAndWorstRecords_Solution {
      * points records, and index 1 is for breaking least points records.
      */
     static int[] breakingRecords(int[] scores) {
-        int maxRecord = 0, worstRecord = 0;
-        int countMaxRecord = 0, countWorstRecrod = 0;
-        maxRecord = scores[0];
-        worstRecord = scores[0];
+        int maxScore = 0, worstScore = 0;
+        int countMaxRecord = 0, countWorstRecord = 0;
+        maxScore = scores[0];
+        worstScore = scores[0];
 
         for (int score : scores) { // the first loop is redundant but let it be
-            if (score > maxRecord) {
-                maxRecord = score;
+            if (score > maxScore) {
+                maxScore = score;
                 countMaxRecord++;
-            } else if (score < worstRecord) {
-                worstRecord = score;
-                countWorstRecrod++;
+            } else if (score < worstScore) {
+                worstScore = score;
+                countWorstRecord++;
             }
         }
-        return new int[]{countMaxRecord, countWorstRecrod};
+        return new int[]{countMaxRecord, countWorstRecord};
     }
 
     public static void main(String[] args) {

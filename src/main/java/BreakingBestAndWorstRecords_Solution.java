@@ -26,6 +26,8 @@ public class BreakingBestAndWorstRecords_Solution {
     /**
      * Returns an integer array containing the numbers of times she broke her records. Index 0 is for breaking most
      * points records, and index 1 is for breaking least points records.
+     *
+     * Time Complexity: O(n)
      */
     static int[] breakingRecords(int[] scores) {
         int maxScore = 0, worstScore = 0;

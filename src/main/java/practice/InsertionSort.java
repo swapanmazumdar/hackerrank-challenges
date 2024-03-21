@@ -22,6 +22,6 @@ public class InsertionSort {
     }
 
     public static void main(String[] args) {
-        IntStream.of(InsertionSort.sort(new int[]{5, 2, 4, 6, 1, 3})).forEach(System.out::println);
+        IntStream.of(InsertionSort.sort(new int[]{6, 5, 4, 3, 2, 1})).forEach(System.out::println);
     }
 }

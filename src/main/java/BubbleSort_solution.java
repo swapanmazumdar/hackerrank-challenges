@@ -1,6 +1,6 @@
 import java.util.stream.IntStream;
 
-public class BubbleSort_solution {
+public class BubbleSort_Solution {
 
     public int[] bubbleSort(int[] arr) {
         boolean isSorted = false;
@@ -25,7 +25,7 @@ public class BubbleSort_solution {
     }
 
     public static void main(String[] args) {
-        BubbleSort_solution bubbleSort_solution = new BubbleSort_solution();
+        BubbleSort_Solution bubbleSort_solution = new BubbleSort_Solution();
         IntStream.of(bubbleSort_solution.bubbleSort(new int[]{3, 2, 1})).forEach(System.out::print);
         System.out.println();
         IntStream.of(bubbleSort_solution.bubbleSort(new int[]{32, 43, 17, 1, 49, 40, 5, 30, 19, 4, 42, 45, 29, 14, 3,

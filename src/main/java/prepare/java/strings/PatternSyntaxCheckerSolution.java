@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
-public class PatternSyntaxChecker {
+public class PatternSyntaxCheckerSolution {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

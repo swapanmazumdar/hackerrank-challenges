@@ -1,6 +1,6 @@
 package prepare.java.advanced;
 
-public class SingletonPattern {
+public class Singleton {
     public String str;
 
     private Singleton singleton;

@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Java's BigDecimal class can handle arbitrary-precision signed decimal numbers. Let's test your knowledge of them!
@@ -68,6 +70,7 @@ public class JavaBigDecimalSolution {
         sc.close();
 
         Arrays.stream(s).sorted(Comparator.comparing(BigDecimal::new, Comparator.reverseOrder()))
-                .forEach(System.out::println);
+                .collect(Collectors.toList()).toArray(s);
+        Stream.of(s).forEach(System.out::println);
     }
 }

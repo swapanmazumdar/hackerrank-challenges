@@ -1,7 +1,9 @@
 package prepare.java.bignumber;
 
 import java.math.BigDecimal;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
 
 /**
  * Java's BigDecimal class can handle arbitrary-precision signed decimal numbers. Let's test your knowledge of them!
@@ -27,6 +29,31 @@ import java.util.*;
  * <p>
  * Locked stub code in the editor will print the contents of array  to stdout. You are only responsible for reordering
  * the array's elements.
+ * <p>
+ * Sample Input
+ * <p>
+ * 9
+ * -100
+ * 50
+ * 0
+ * 56.6
+ * 90
+ * 0.12
+ * .12
+ * 02.34
+ * 000.000
+ * <p>
+ * Sample Output
+ * <p>
+ * 90
+ * 56.6
+ * 50
+ * 02.34
+ * 0.12
+ * .12
+ * 0
+ * 000.000
+ * -100
  */
 public class JavaBigDecimalSolution {
 
